@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+.image-container {
+    width: 100px;
+    height: 500px;
+    display: flex;
+    border-radius: 50px;
+    background: cover center no-repeat;
+    flex: 0.5;
+    cursor: pointer;
+    transition: all 700ms ease-in;
+    margin: 10px;
+    position: relative;
+}
+
+.image-container.active {
+    flex: 3;
+}
+
+.image-container h2 {
+    color: white;
+    text-shadow: 2px 1px 5px black;
+    align-self: flex-end;
+    margin-left: 30px;
+    opacity: 0;
+}
+
+.image-container.active h2 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}

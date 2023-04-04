@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    height: 100vh;
+    background-image: linear-gradient(90deg, #7d5fff, #7158e2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.input {
+    width: 0px;
+    height: 50px;
+    border: 0;
+    padding: 0;
+    background-color: #fff;
+    font-size: 18px;
+    transition: width 0.3s ease;
+}
+
+.btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: #fff;
+    cursor: pointer;
+}
+
+.btn i {
+    font-size: 24px;
+}
+
+.btn:focus, .input:focus {
+    outline: none;
+}
+
+.input.show {
+    width: 170px;
+    padding: 0 15px;
+}

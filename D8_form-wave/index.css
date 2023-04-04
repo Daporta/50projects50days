@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Muli', sans-serif;
+    box-sizing: border-box;
+}
+
+.app {
+    background-color: steelblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrapper {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    padding: 40px;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+label {
+    font-size: 18px;
+    transform: translateY(-65px);
+    pointer-events: none;
+}
+
+input {
+    margin-bottom: 25px;
+    border: none;
+    background: none;
+    border-bottom: 2px white solid;
+    padding: 10px 0;
+    font-size: 18px;
+    caret-color: white;
+    color: white;
+}
+
+input:focus,
+input:valid {
+    outline: 0;
+    border-bottom: 2px lightblue solid;
+}
+
+label span {
+    display: inline-block;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+input:focus + label span,
+input:valid + label span { 
+    color: lightblue;
+    transform: translateY(-30px);
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    background: lightblue;
+    font-size: 16px;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+span {
+    color: lightblue;
+}

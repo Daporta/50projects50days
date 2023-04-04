@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.app {
+    height: 100vh;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.ps {
+    background-image: url('./images/ps.jpg');
+    background-size: auto 785px;
+    left: 0;
+}
+
+.ps::before {
+    content: '';
+    background-color: rgba(87, 84, 236, 0.7);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease-in-out;
+}
+
+.xbox {
+    background-image: url('./images/xbox.jpg');
+    right: 0;
+}
+
+.xbox::before {
+    content: '';
+    background-color: rgba(43, 43, 43, 0.8);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease-in-out;
+}
+
+.wrapper div {
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+}
+
+div h2 {
+    color: #fff;
+    font-size: 63px;
+    z-index: 1;
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.buybtn {
+    color: #fff;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    border: 3.5px #fff solid ;
+    padding: 25px 80px;
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+}
+
+.hover-left .ps {
+    width: 70vw;
+}
+
+.hover-left .xbox {
+    width: 30vw;
+}
+
+.hover-right .xbox {
+    width: 70vw;
+}
+
+.hover-right .ps {
+    width: 30vw;
+}
