@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Muli', sans-serif;
+    box-sizing: border-box;
+}
+
+.app {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.question {
+    position: relative;
+    width: 600px;
+    margin: 10px;
+    border: 1px solid #9fa4a8;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.question p {
+    display: none;
+}
+
+
+.question button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question.active {
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.question.active::before,
+.question.active::after {
+    content: '\f075';
+    font-family: 'Font Awesome 5 Free';
+    color: #2ecc71;
+    font-size: 7rem;
+    position: absolute;
+    opacity: 0.2;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+}
+
+.question.active::before {
+    color: #3498db;
+    top: -10px;
+    left: -30px;
+    transform: rotateY(180deg);
+}
+
+.question.active button {
+    background-color: #9fa4a8;
+}
+
+.question.active p {
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.fa-times {
+    color: #fff;
+}
